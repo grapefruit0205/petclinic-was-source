@@ -24,4 +24,4 @@ AWS 정리(2026-10-01) 뒤 남아 있던 WAS AMI v6(`was-goldenImage-v6`, ami-0e
 - `pom.xml` 의 예제 기본 DB 비밀번호(`petclinic`) → 빈 값
 - Tomcat 설정(`tomcat-users.xml` 등)은 비밀번호가 있어 올리지 않음
 - 실제 DB 비밀번호는 원래부터 소스·WAR 에 없음(실행 때 Secrets Manager 에서 받음)
-- RDS 주소는 남겨 둠(2026-10-01 삭제된 DB)
+- `pom.xml` 의 RDS 주소 → `WRITE_DB_HOST` · `READ_DB_HOST` 자리표시자 (운영에서는 `deploy/fetch_db_secret.py` 가 실행 때 주소를 채움)
